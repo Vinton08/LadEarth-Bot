@@ -1,0 +1,14 @@
+{
+  "name": "yes",
+  "version": "1.0.0",
+  "description": "Discord Bot For LadEarth",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Vinton Hester",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^12.5.3"
+  }
+}
