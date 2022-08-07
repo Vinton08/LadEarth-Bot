@@ -1,30 +1,38 @@
+//Made By Vinton Hester ***DO NOT DISTRIBUTE***
 const Discord = require('discord.js');
-const client = new Discord.Client();
+const config = require("./config.json");
+const client = new Discord.Client({ partials: ["MESSAGE", "CHANNEL", "REACTION"] });
 const prefix = '-';
 const fs = require('fs');
+const mongoose = require('mongoose');
+const memberCounter = require('./counters/member-counter');
 client.commands = new Discord.Collection();
-const commandFiles = fs.readdirSync('./commands/').filter(file =>file.endsWith('.js'));
-for(const file of commandFiles){
-    const command = require(`./commands/${file}`);
-client.commands.set(command.name, command);
-}
+client.events = new Discord.Collection();
+require("dotenv").config();
 
-client.once('ready', () =>{
-    console.log('Ladearth bot is active!')
+client.on('ready', () => {
+    memberCounter(client);
 });
 
-client.on('message', message =>{
-    if(!message.content.startsWith(prefix) || message.author.bot) return;
+['command_handler', 'event_handler'].forEach (handler =>{
+    require(`./handlers/${handler}`)(client, Discord);
+})
 
-    const args = message.content.slice(prefix.length).split(" ");
-    const command = args.shift().toLowerCase();
-
-    if(command === 'ip'){
-        client.commands.get('ip').execute(message, args, Discord);
-    } else if (command == 'version'){
-        client.commands.get('version').execute(message, args, Discord);
-    }
-
+client.on('guildMemberAdd', guildMember => {
+    guildMember.guild.channels.chache.get('738155861171765260').send(`Welcome <@${guildMember.user.id}> to LadEarth! :ladearth_still:`)
 });
 
-client.login('NzQ5NDgzNTk0MDg2MzUwODU4.X0so_Q.OPMCyAMOndplv6ROLc8aupnz2tA');
+mongoose
+    .connect(process.env.MONGODB, {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+    })
+    .then(() => {
+        console.log('MongoDB Connected!')
+    })
+    .catch((err) => {
+        console.log(err);
+    })
+
+client.login(config.token);
+

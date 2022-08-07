@@ -1,12 +1,24 @@
 {
   "name": "yes",
-  "version": "1.0.0",
+  "version": "1.9.6",
   "description": "Discord Bot For The LadEarth Server",
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Vinton Hester",
-  "license": "ISC"
-  
+  "license": "ISC",
+  "dependencies": {
+    "@discordjs/opus": "^0.5.3",
+    "@discordjs/voice": "^0.8.0",
+    "axios": "^0.27.2",
+    "discord.js": "^12.5.3",
+    "dotenv": "^16.0.0",
+    "ffmpeg-static": "^4.4.1",
+    "minecraft-server-util": "^5.2.9",
+    "mongoose": "^6.2.3",
+    "ms": "^2.1.3",
+    "yt-search": "^2.10.3",
+    "ytdl-core": "^4.11.0"
+  }
 }
