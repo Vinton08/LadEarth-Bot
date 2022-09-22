@@ -7,11 +7,11 @@ module.exports = {
     execute(message, client, args, Discord) {
         const newEmbed = new MessageEmbed()
         .setColor('#00f0f0')
-	.setTitle('Chnagelog for version 1.9.6')
+	.setTitle('Chnagelog for version 1.9.7')
 	.setDescription('New Version!')
     .addFields(
-        {name: 'Updated', value: 'Weather Commands'},
-        {name: 'Commands:', value: '-Weather Location'}
+        {name: 'Updated', value: 'Purge Command'},
+        {name: 'Commands:', value: '-purge #'}
     )
     .setTimestamp()
 message.channel.send(newEmbed).then((msg)=>{

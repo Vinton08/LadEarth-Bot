@@ -55,12 +55,12 @@ module.exports = {
 				},
 				{
 					name: 'Sunrise: ',
-					value: city.sys.sunrise,
+					value: `<t:${city.sys.sunrise}>`,
 					inline: true,
 				},
 				{
 					name: 'Sunrise: ',
-					value: city.sys.sunset,
+					value: `<t:${city.sys.sunset}>`,
 					inline: true,
 				},
 			);
