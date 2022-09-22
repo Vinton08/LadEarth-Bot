@@ -6,12 +6,14 @@ const prefix = '-';
 const fs = require('fs');
 const mongoose = require('mongoose');
 const memberCounter = require('./counters/member-counter');
+const swxwarn = require('./counters/swwarn');
 client.commands = new Discord.Collection();
 client.events = new Discord.Collection();
 require("dotenv").config();
 
 client.on('ready', () => {
     memberCounter(client);
+    swxwarn(client);
 });
 
 ['command_handler', 'event_handler'].forEach (handler =>{
