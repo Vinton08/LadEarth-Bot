@@ -10,6 +10,7 @@ module.exports = {
 	.setDescription('Everything you need to know about the server')
     .addFields(
         {name: 'Server Version', value: '1.16.5'},
+        {name: 'Bot Version', value: '1.9.8'},
         {name: 'Server IP', value:'LadEarth.mc.gg'},
         {name: 'Modpack Link', value: 'https://www.curseforge.com/minecraft/modpacks/ladearth'},
         {name: 'Important Channels', value: '<#753678747110080586>, <#791211820543115264>, <#791211862909386802>'}

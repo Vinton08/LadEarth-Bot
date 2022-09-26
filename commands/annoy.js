@@ -4,7 +4,7 @@ module.exports = {
     description: "why did i make this",
     execute(message, client, args, Discord) {
 
-        message.channel.send('<@493574454752837632> I agree to the LadEarth Staff Gudelines.').then((msg)=>{
+        message.channel.send('<@493574454752837632> I am hungry, please feed me.').then((msg)=>{
             message.delete();
         })
     }

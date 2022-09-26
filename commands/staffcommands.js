@@ -24,10 +24,10 @@ module.exports = {
         {name: 'Dpromote', value: 'Promotes a trial discord mod'},
         {name: 'Ddomote', value: 'Demotes a discord mod'},
         {name: 'Admin Commands', value: '------------'},
-        {name: 'adminc1', value: 'General admin command'},
-        {name: 'adminc2', value: 'General admin command'},
-        {name: 'adminc3', value: 'Unassigned admin command'},
-        {name: 'adminc4', value: 'General admin command'},
+        {name: 'adminc1', value: 'Roles List'},
+        {name: 'adminc2', value: 'Bot Downtime'},
+        {name: 'adminc3', value: 'Backup Reaction Roles'},
+        {name: 'adminc4', value: 'Bot Downtime End'},
         {name: 'adminc5', value: 'Unassigned admin command'}
 
     )

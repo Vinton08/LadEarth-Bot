@@ -6,11 +6,11 @@ module.exports= {
     execute(message, client, args, Discord) {
         const newEmbed = new MessageEmbed()
         .setColor('#0099ff')
-	.setTitle('Changelog for version 1.5.1!')
+	.setTitle('Changelog for version 1.9.8!')
 	.setDescription('New Version!')
     .addFields(
-        {name: 'Whats New?:', value: 'Major Bug fixes'},
-        {name: 'Updates', value: 'Fixed permission issues with certian commands'}
+        {name: 'Whats New?:', value: 'Updated Help Commands'},
+        {name: 'Updates', value: 'Updated help command'}
     )
     .setTimestamp()
 message.channel.send(newEmbed);
