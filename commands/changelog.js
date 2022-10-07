@@ -6,7 +6,7 @@ module.exports = {
     description: "bot changelog",
     execute(message, client, args, Discord) {
         const newEmbed = new MessageEmbed()
-        .setColor('#00f0f0')
+        .setColor('#ff9900')
 	.setTitle('Chnagelog for version 1.9.9')
 	.setDescription('New Version!')
     .addFields(
