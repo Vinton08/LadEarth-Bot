@@ -8,11 +8,12 @@ module.exports = {
     async execute(message, args, cmd, client, discord, profileData) {
 
         const locations = [
-            "Vinton's House",
-            "Pear's House",
-            "LadEarth Server",
-            "Volcanoid Federation",
-            "Waffle's House",
+            "Vinton",
+            "Pear",
+            "LadEarth",
+            "Vulcanoid",
+            "Waffle",
+            "RedCell",
             "Canada"
         ];
 
@@ -47,6 +48,6 @@ module.exports = {
         });
 
 
-        message.channel.send(`<@${message.author.id}> Which location would you like to search?\n Type the location in this channel\n \`${chosenLocations.join('` `')}\``);
+        message.channel.send(`<@${message.author.id}> Who's house would you like to go to?\n Type the location in this channel\n \`${chosenLocations.join('` `')}\``);
     }
 }

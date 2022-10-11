@@ -20,9 +20,7 @@ client.on('ready', () => {
     require(`./handlers/${handler}`)(client, Discord);
 })
 
-client.on('guildMemberAdd', guildMember => {
-    guildMember.guild.channels.chache.get('738155861171765260').send(`Welcome <@${guildMember.user.id}> to LadEarth! :ladearth_still:`)
-});
+
 
 mongoose
     .connect(process.env.MONGODB, {
