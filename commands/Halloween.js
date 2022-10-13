@@ -4,7 +4,7 @@ module.exports = {
     name: 'halloween',
     cooldown: 10,
     permissions: ["MANAGE_ROLES"],
-    description: "minecraft demote command",
+    description: "Halloween 2022",
     async execute(message, args, Discord, client){
         const role = message.guild.roles.cache.find(role => role.name === "Halloween 2022");
         const emoji = '🎃';
